@@ -1,3 +1,29 @@
-.header {
-  align-items: center;
+body {
+  background-color: rgb(67, 67, 67);
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+Header {
+  font-size: 3vh;
+}
+
+Header {
+  margin-top: 10vh;
+  padding-left: 20vw;
+}
+Header h2 {
+  padding-left: 3vw;
+}
+Header .picture {
+  align-items: right;
+  background-image: url(/pictures/swiss.jpg.jpg.webp);
+}
+
+main {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 20vh;
 }/*# sourceMappingURL=mian.css.map */
