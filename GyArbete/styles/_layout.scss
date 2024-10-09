@@ -1,16 +1,30 @@
 
-Header{
+header{
+    display: flex;
+    flex-direction: row;
     margin-top: 10vh;
-    padding-left: 20vw;
-    h2 {padding-left: 3vw ;}
-    .picture{
-        align-items: right;
-        background-image: url(/pictures/swiss.jpg.jpg.webp);
+    
+    justify-content: space-evenly;
+    
+    
+    .hcol1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        padding-left: 3vw ;
+    }
+
+    .proffesinal_pic{
+        display: flex;
+     justify-content: right;
+     
     }
 }
 
 main{
  padding-left: 10vw;
  padding-right: 10vw;
-padding-top: 20vh;
+ padding-top: 20vh;
 }
