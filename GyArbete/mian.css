@@ -33,4 +33,57 @@ main {
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 20vh;
+}
+
+.qualifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+}
+
+.quals1 {
+  border-radius: 20px;
+  background-color: rgb(10, 81, 24);
+  box-shadow: 3px;
+}
+
+.quals2 {
+  border-radius: 20px;
+  background-color: rgb(10, 81, 24);
+  box-shadow: 3px;
+}
+
+.quals3 {
+  border-radius: 20px;
+  background-color: rgb(10, 81, 24);
+  box-shadow: 10px;
+  box-shadow: color(red);
+}
+
+.about_me {
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20vh;
+  width: 50vw;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.about_me.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20vh;
+  width: 50vw;
+  padding-bottom: 20vh;
+}
+
+.about_me_info {
+  margin-right: 10vw;
 }/*# sourceMappingURL=mian.css.map */
