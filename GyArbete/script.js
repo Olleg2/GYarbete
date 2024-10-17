@@ -1,28 +1,59 @@
-let count = 0;
-let delay = 100; 
+let count1 = 0;
+let count2 = 0; 
+let count3 = 0;
+let delay1 = 100;
+let delay2 = 100;
+let delay3 = 100;
 
-function updateCount() {
-    document.getElementById("qual1").innerHTML = count;
-    count++;
+function updateCount1() {
+    document.getElementById("qual1").innerHTML = count1;
+    count1++;
 
-    if (count > 5) {
+    if(count1 > 1){
+        return;
+    }
+    delay1 += 1000;
+    setTimeout(updateCount1, delay1);
+}
+setTimeout(updateCount1, delay1);
+
+
+function updateCount2() {
+    document.getElementById("qual2").innerHTML = count2;
+    count2++;
+
+    if (count2 > 6  ) { //Amount of fluent programing languages
         return; 
     }
-    delay += 200;
-    setTimeout(updateCount, delay);
+    delay2 += 200;
+    setTimeout(updateCount2, delay2);
 }
-setTimeout(updateCount, delay);
+
+function updateCount3() {
+    document.getElementById("qual3").innerHTML = count3;
+    count3++;
+
+    if (count3> 3) { //Amount years of experience
+        return; 
+    }
+    delay3 += 700;
+    setTimeout(updateCount3, delay3);
+}
+
+setTimeout(updateCount1, delay1);
+setTimeout(updateCount2, delay2);
+setTimeout(updateCount3, delay3);
 
 
 
 window.addEventListener("scroll", function() {
     const aboutMeSection = document.querySelector(".about_me");
-    const scrollPosition = window.scrollY; // Get the current scroll position
+    const scrollPosition = window.scrollY; 
 
-    // Change the threshold value to control when the section appears
-    if (scrollPosition > 300) { // Adjust this value as needed
-        aboutMeSection.classList.add("visible"); // Add the class to make it visible
+    
+    if (scrollPosition > 300) { 
+        aboutMeSection.classList.add("visible"); 
     } else {
-        aboutMeSection.classList.remove("visible"); // Remove the class to hide it
+        aboutMeSection.classList.remove("visible"); 
     }
 });

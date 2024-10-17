@@ -1,6 +1,6 @@
 body {
-  background-color: rgb(36, 35, 35);
-  color: white;
+  background-color: #114B5F;
+  color: #F3E9D2;
 }
 
 body {
@@ -30,8 +30,8 @@ header .proffesinal_pic {
 }
 
 main {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
   padding-top: 20vh;
 }
 
@@ -44,21 +44,26 @@ main {
 
 .quals1 {
   border-radius: 20px;
-  background-color: rgb(10, 81, 24);
+  background-color: #1A936F;
   box-shadow: 3px;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .quals2 {
   border-radius: 20px;
-  background-color: rgb(10, 81, 24);
+  background-color: #88D498;
   box-shadow: 3px;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .quals3 {
   border-radius: 20px;
-  background-color: rgb(10, 81, 24);
-  box-shadow: 10px;
-  box-shadow: color(red);
+  background-color: #6f9e78;
+  box-shadow: 3px;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .about_me {
