@@ -1,6 +1,6 @@
 body {
-  background-color: #114B5F;
-  color: #F3E9D2;
+  background-color: #c6c6c7;
+  color: #000000;
 }
 
 body {
@@ -30,8 +30,8 @@ header .proffesinal_pic {
 }
 
 main {
-  padding-left: 15vw;
-  padding-right: 15vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
   padding-top: 20vh;
 }
 
@@ -67,7 +67,7 @@ main {
 }
 
 .about_me {
-  padding-right: 10vw;
+  padding-right: 5vw;
   display: flex;
   flex-direction: row;
   padding-top: 20vh;
@@ -75,18 +75,22 @@ main {
   justify-content: space-between;
   opacity: 0;
   transition: opacity 1s ease;
+  border-color: black;
+  border-width: 1px;
 }
 
 .about_me.visible {
   display: block;
   opacity: 1;
   transition: opacity 1s ease;
-  padding-right: 10vw;
+  padding-right: 5vw;
   display: flex;
   flex-direction: row;
   padding-top: 20vh;
   width: 50vw;
   padding-bottom: 20vh;
+  border-color: black;
+  border-width: 1px;
 }
 
 .about_me_info {
@@ -94,7 +98,8 @@ main {
 }
 
 .about_me_info_col {
-  padding: 2vh;
+  padding: 1vh;
+  margin-top: 0px;
 }
 
 .about_me_info_col_cont {
