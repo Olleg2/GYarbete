@@ -57,3 +57,14 @@ window.addEventListener("scroll", function() {
         aboutMeSection.classList.remove("visible"); 
     }
 });
+console.log("aaaaaa");
+window.addEventListener("scroll", function() {
+    const whyMeSection = document.querySelector(".why_me");// Fixa denna skiten
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 300) {
+        whyMeSection.classList.add("visible");
+    } else {
+        whyMeSection.classList.remove("visible");
+    }
+});

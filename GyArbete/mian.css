@@ -110,14 +110,29 @@ main {
   gap: 10vw;
 }
 
-#why_me {
+.why_me {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   animation-name: slide-from-left;
   animation-duration: 2s;
 }
+@keyframes slide-from-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 50%;
+  }
+}
 
+.why_me.visible {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: slide-from-left;
+  animation-duration: 2s;
+}
 @keyframes slide-from-left {
   from {
     left: 100%;
