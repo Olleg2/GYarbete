@@ -5,6 +5,7 @@ let delay1 = 100;
 let delay2 = 100;
 let delay3 = 100;
 
+
 function updateCount1() {
     document.getElementById("qual1").innerHTML = count1;
     count1++;
@@ -67,4 +68,8 @@ window.addEventListener("scroll", function() {
     } else {
         whyMeSection.classList.remove("visible");
     }
+});
+
+app.listen(port, function(){
+    console.log(`servern körs på http://localhost:${port}`);
 });
