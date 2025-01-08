@@ -1,22 +1,24 @@
-
 const express = require('express');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = 3000;
 
+const articlesFile = './articles.json';
 
+let articles = [];
+if (fs.existsSync(articlesFile)) {
+  articles = JSON.parse(fs.readFileSync(articlesFile, 'utf8'));
+}
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Set up EJS as the template engine
 app.set('view engine', 'ejs');
 
-// Configure multer for image uploads
 const storage = multer.diskStorage({
   destination: './public/uploads',
   filename: (req, file, cb) => {
@@ -25,10 +27,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// In-memory articles store
-const articles = [];
-
-// Routes
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -37,13 +35,16 @@ app.get('/forum', (req, res) => {
   res.render('forum', { articles });
 });
 
-
 app.post('/add-article', upload.single('image'), (req, res) => {
   const { title } = req.body;
   const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
 
-  articles.push({ title, imageUrl });
-  res.redirect('/');
+  const article = { title, imageUrl };
+  articles.push(article);
+
+  fs.writeFileSync(articlesFile, JSON.stringify(articles, null, 2));
+
+  res.redirect('/forum');
 });
 
 app.listen(PORT, () => {
