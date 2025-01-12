@@ -4,31 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mian.css">
 </head>
 <body>
-    <nav>
-        <a href="/forum">forum</a>
-    &bull;
-    <a href="/">index</a>
-    </nav>
-    <h1>Add a New Article</h1>
-  
+  <nav>
+    <div class="navbar">
+        <div class="navbar-container">
+            <img src="/uploads/logo.png" alt="Logo" class="navbar-logo">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/forum" class="navbar-link">Forum</a>
+        </div>
+    </div>
+</nav>
+    
+    
+    <div class="artTitle"><h1>Add new article</h1></div>
+    <div id="forumcontainer">
     <form action="/add-article" method="POST" enctype="multipart/form-data">
-      <!-- Input for the article title -->
-      <label for="title">Article Title:</label><br>
+   
+      <label for="title">Title of the article:</label><br>
       <input type="text" id="title" name="title" required><br><br>
       
-      <!-- Input for the image file -->
-      <label for="image">Upload Image:</label><br>
-      <input type="file" id="image" name="image" accept="image/*"><br><br>
-      
-      <!-- Submit button -->
-      <button type="submit">Submit</button>
-    </form>
-
-    <h2>Articles</h2>
-    <ul>
-      <!-- Example of displaying articles dynamically -->
      
+      <label for="image">Upload an image fitting your title!</label><br>
+      <input type="file" id="image" name="image" accept="image/*" class="file"><br><br>
+      
+      
+      <button type="submit" id="submitbutt">Post article</button>
+    </form>
+  </div>
+
+  
+    <div class="artTitle"><h2>Articles</h2></div>
+  <div id="articlecontainer">
+    <ul>
+      
+
+      <div class="articles">
+        <% articles.forEach((article, index) => { %>
+          <div class="article">
+            <h3><%= article.title %></h3>
+            <% if (article.imageUrl) { %>
+              <img src="<%= article.imageUrl %>" alt="<%= article.title %>">
+            <% } %>
+      
+          
+            <div class="comments">
+              <h4>Comments:</h4>
+              <% (article.comments || []).forEach(comment => { %>
+                <p><strong><%= comment.username %>:</strong> <%= comment.text %></p>
+              <% }) %>
+      
+            
+              <form action="/add-comment" method="POST">
+                <input type="hidden" name="articleIndex" value="<%= index %>">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+      
+                <label for="text">Comment:</label>
+                <textarea id="text" name="text" required></textarea><br><br>
+      
+                <button type="submit">Post Comment</button>
+              </form>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+  </ul>
+</div>
+
+
 </body>
+
+<footer>
+  <div class="footerbox">
+    <div class="footer-item">
+      <h3>About Us</h3>
+      <p>I am a profesional internet player</p>
+    </div>
+    <div class="footer-item">
+      <h3>Services</h3>
+      <p>web work</p>
+      <p>Web programming</p>
+      <p>Therapy</p>
+  </div>
+    <div class="footer-item">
+      <h3>Contact</h3>
+      <p><a href="klockren">clock</a></p>
+      <p><a href="mailto:olle.d.gordon@gmail.com">HIRE ME!!!!</a></p>
+  </div>
+    <div class="footer-item">
+      <p>Follow Me</p>
+            <p><a href="instagram.com">Insta</a></p>
+            <p><a href="snapchat.com">Snap</a></p>
+    </div>
+  </div>
+  <p id="copyright">©Copyright of Olles company AB</p>
+</footer>
+
 </html>

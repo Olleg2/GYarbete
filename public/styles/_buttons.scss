@@ -1,0 +1,12 @@
+#submitbutt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    background-color: greenyellow;
+    border-radius: 15px;
+    color: blue;
+    font-size: large;
+    
+    &:hover{
+        background-color: darkgreen;
+    }
+}

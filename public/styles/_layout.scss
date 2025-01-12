@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 
 header{
     display: flex;
@@ -100,46 +104,129 @@ main{
     justify-content: space-evenly;
 }
 
+
 #why_me_col{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 50vw;
     gap: 10vw;
+    justify-items: center;
 }
 
-.why_me{
+.why_me {
 
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-name: slide-from-left;
+    transform: translateX(0); 
+    animation-name: none; 
     animation-duration: 2s;
-   
-    @keyframes slide-from-left {
-        from {
-          left: 100%;
-        }
-        to {
-          left: 50%;
-        }
-      }
+    animation-fill-mode: forwards; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.why_me.visible{
+
+
+@keyframes slide-from-left {
+    from {
+       
+    }
+    to {
+        margin-left: 0; 
+    }
+}
+#forumcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.artTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#articlecontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.article {
+    color: black;
+    background: white;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+}
+
+
+.file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    background-color: gray;
+    padding: 5vh;
+    margin-top: 30vh;
+}
+//
+.footerbox {
+    display: flex;
+    flex-direction: row; /* Ensures items are in a row */
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.footer-item {
+    margin: 0 20px; /* Adds spacing between items */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+#copyright{
+    position: absolute;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+#why_me_col_pic{
+    margin-left: 0px;
+    max-width: 100%; 
+    max-height: 50vh; 
+    object-fit: contain; 
     
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-name: slide-from-left;
-    animation-duration: 2s;
-   
-    @keyframes slide-from-left {
-        from {
-          left: 100%;
-        }
-        to {
-          left: 50%;
-        }
-      }
+}
+
+#why_me_col{
+    margin-left: 0px;
 }

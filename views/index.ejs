@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Fixa så att #why_me scrollar in när jag scrollar ner-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,26 @@
     <link rel="stylesheet" href="mian.css">
 
 </head>
+
 <body>
-<nav>
-    <a href="/forum">forum</a>
-    &bull;
-    <a href="/">index</a>
-</nav>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-container">
+                <img src="/uploads/logo.png" alt="Logo" class="navbar-logo">
+                <a href="/" class="navbar-link">Home</a>
+                <a href="/forum" class="navbar-link">Forum</a>
+            </div>
+        </div>
+    </nav>
     <header>
         <div class="hcol1">
             <h1>Olle Gordon.</h1>
             <h2> Web Design</h1>
-            <h2> Web, Product</h1>
+                <h2> Web, Product</h1>
         </div>
         <div>
-            <img src="/uploads/swisscheese.webp" alt="ost">
-            
+            <img src="/uploads/me_me_me.jpg" alt="me" style="height: 30vh; width: 15vw;">
+
         </div>
     </header>
     <main>
@@ -44,23 +49,24 @@
                 <div class="about_me_info">
                     <div class="about_me_info_col">
                         <h2>About me</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat suscipit explicabo iure
-                            ullam mollitia et delectus quas culpa vero alias eum ea ut, incidunt ipsa enim nulla in
-                            vitae! Impedit!</h3>
+                        <h3>"I'm a motivated and adaptable individual with a passion for teamwork and collaboration. An eager learner, I quickly grasp new concepts and thrive in dynamic environments. Easy to work with and dedicated to achieving shared goals, I bring positivity, efficiency, and enthusiasm to every project and team I join.</h3>
                     </div>
                     <div class="about_me_info_col">
                         <div id="about_me_info_col_exp">
                             <h2>Experince</h2>
+                            <h3>3 years of freelance programming</h3>
                         </div>
                     </div>
                     <div class="about_me_info_col">
-                        <div><h2>Contact</h2></div>
+                        <div>
+                            <h2>Contact</h2>
+                        </div>
                         <div class="about_me_info_col_cont">
                             <div>
                                 <a href="https://www.instagram.com/">Instagram</a>
                             </div>
                             <div>
-                               <a href="x.com">Twitter</a> 
+                                <a href="x.com">Twitter</a>
                             </div>
                             <div>
                                 <a href="https://klockren.nu/">Klockren</a>
@@ -72,26 +78,72 @@
                     </div>
                 </div>
                 <div class="about_me_picture">
-                    <img src="/uploads/swisscheese.webp" alt="">
+                    <img src="/uploads/me_me_me.jpg" alt="" style="height: 30vh; width: 15vw;">
                 </div>
             </div>
             <div class="why_me">
                 <div id="why_me_col">
                     <div id="why_me_col_pic">
-                        <img src="/uploads/swisscheese.webp" alt="">
+                        <img src="/uploads/proud_work.png" alt="" style="height: 30vh;" width="400px">
                     </div>
                     <div id="why_me_col_txt">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime tempore corrupti error earum laboriosam ea labore, dolores qui voluptate sit aliquam, accusantium et temporibus quos, similique nisi libero unde. Porro, quis cumque maiores esse placeat voluptatibus eligendi dolores. Neque, magnam?</p>
+                        <h2>My work</h2>
+                        <p>I can work i many diffirent environments and langiage models, i can very easaly adapt to diffirent teams and people. my proudest work is on the picture on the left where i did alot of programming to make it happend.</p>
                     </div>
                 </div>
             </div>
 
+           
         </div>
 
-
+        <div class="animation-container">
+            <div class="lightning-container">
+              <div class="lightning white"></div>
+              <div class="lightning red"></div>
+            </div>
+            <div class="boom-container">
+              <div class="shape circle big white"></div>
+              <div class="shape circle white"></div>
+              <div class="shape triangle big yellow"></div>
+              <div class="shape disc white"></div>
+              <div class="shape triangle blue"></div>
+            </div>
+            <div class="boom-container second">
+              <div class="shape circle big white"></div>
+              <div class="shape circle white"></div>
+              <div class="shape disc white"></div>
+              <div class="shape triangle blue"></div>
+            </div>
+          </div>
 
         <script src="script.js"></script>
     </main>
 </body>
+<footer>
+    <div class="footerbox">
+        <div class="footer-item">
+            <h3>About Us</h3>
+            <p>I am a profesional internet player</p>
+        </div>
+        <div class="footer-item">
+            <h3>Services</h3>
+            <p>web work</p>
+            <p>Web programming</p>
+            <p>Therapy</p>
+        </div>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <p><a href="klockren">clock</a></p>
+            <p><a href="mailto:olle.d.gordon@gmail.com">HIRE ME!!!!</a></p>
+        </div>
+        <div class="footer-item">
+            <p>Follow Me</p>
+            <p><a href="instagram.com">Insta</a></p>
+            <p><a href="snapchat.com">Snap</a></p>
+        </div>
+        
+    </div>
+    <p id="copyright">©Copyright of Olles company AB</p>
+</footer>
 
 </html>
